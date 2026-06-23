@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamHub - Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ExamHub</div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div id="user-name" style="font-weight:600;"></div>
+                    <div id="user-role" style="font-size:12px; color:var(--primary);"></div>
+                </div>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>Student Panel</h2>
+                <div data-action="showAvailableAssessments" class="sidebar-btn">✍️ Take OBJ Exam</div>
+                <div data-action="showAvailableTheoryAssessments" class="sidebar-btn">✍️ Take Theory Exam</div>
+                <div data-action="showMyResults" class="sidebar-btn">📈 View OBJ Results</div>
+                <div data-action="showMyTheoryResults" class="sidebar-btn">📈 View Theory Results</div>
+                <div data-action="showMyGrades" class="sidebar-btn" style="background:#2a8e5a; color:white;">⭐ View My Grades</div>
+                <div data-action="showClassNotes" class="sidebar-btn">📚 Class Notes</div>
+                <div data-action="showMyNotes" class="sidebar-btn">📓 My Notes</div>
+            </div>
+
+            <div class="main">
+                <h1 id="welcome-msg"></h1>
+                <div id="exam-area" style="margin-top:30px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>

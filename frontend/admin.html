@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamHub - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ExamHub</div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div id="user-name" style="font-weight:600;"></div>
+                    <div id="user-role" style="font-size:12px; color:var(--primary);"></div>
+                </div>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>Admin Panel</h2>
+                <div data-action="showAddUser" class="sidebar-btn">➕ Add User</div>
+                <div data-action="showManageUsers" class="sidebar-btn">👥 Manage Users</div>
+                <div data-action="showPushExam" class="sidebar-btn">📅 Push Exam</div>
+                <div data-action="showResetExam" class="sidebar-btn">🔄 Reset Exam</div>
+                <div data-action="showGeneralResults" class="sidebar-btn">📊 View Results</div>
+                <div data-action="toggleCorrectionFeature" class="sidebar-btn">🔄 Correction: <span id="correction-status">ON</span></div>
+            </div>
+
+            <div class="main">
+                <h1 id="welcome-msg"></h1>
+                <div id="content-area"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

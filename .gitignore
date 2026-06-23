@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Environment variables (NEVER commit these)
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploads (local only — not persisted on Vercel)
+backend/uploads/*
+!backend/uploads/.gitkeep

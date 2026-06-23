@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/api/index.js"
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "backend/api/index.js"
+    },
+    {
+      "src": "/login.html",
+      "dest": "/frontend/login.html"
+    },
+    {
+      "src": "/admin.html",
+      "dest": "/frontend/admin.html"
+    },
+    {
+      "src": "/teacher.html",
+      "dest": "/frontend/teacher.html"
+    },
+    {
+      "src": "/student.html",
+      "dest": "/frontend/student.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/frontend/index.html"
+    },
+    {
+      "src": "/(.*\\.(js|css|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot))",
+      "dest": "/frontend/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/frontend/login.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/login.html"
+    }
+  ]
+}
